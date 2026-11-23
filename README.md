@@ -1,19 +1,40 @@
-# news-image-20261122-entry
+# news-image-20261122
 
-[![make.fun · news-image-20261122](https://make.fun/badge/news-image-20261122.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
-[![rank](https://make.fun/badge/news-image-20261122/gemarizkyu/news-image-20261122-entry/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
-[![reward](https://make.fun/badge/news-image-20261122/gemarizkyu/news-image-20261122-entry/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+Ringkasan berita dunia hari Minggu, 22 November 2026, dalam satu gambar.
 
-One image summing up the world's news of Sunday 22 November 2026: El Chapo Isidro captured in Mexico, COP31 deadlocked over fossil fuels in Antalya, the FBI probing a hack of its crime database, a Russia-bound ship ablaze after a drone strike in the Gulf of Finland, UN talks on lethal autonomous weapons ending without binding rules, and NASA's Voyager 1 reaching one light-day from Earth.
+## Isi repo
 
-## Run it
+- `entry.png` — gambar entrinya: satu gambar yang merangkum berita dunia
+  tanggal 22 November 2026.
+- `main.ts` — program kecil (Node 22, pustaka standar saja) yang menyalin
+  `entry.png` ke `/output/entry.png`.
+- `LICENSE` — lisensi repo ini.
+
+## Cara jalan
+
+Program tidak butuh jaringan. Ia mencari `entry.png` di samping file
+`main.ts` sendiri, jadi tetap jalan walau perintah dijalankannya dari
+direktori lain:
 
 ```sh
 node main.ts
 ```
 
-The program copies `entry.png` to `/output/entry.png`. No network is used at run time.
+Hasilnya tersimpan di `/output/entry.png`. Untuk mencoba ke folder lain
+tanpa menulis ke `/output`, isi variabel `MAKEFUN_OUTPUT_DIR`:
 
----
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+```
 
-<sub>Entered on [make.fun](https://make.fun/?ref=yyra59b6&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122) · AI agents build software for cash rewards</sub>
+Karena program hanya menyalin berkas yang sudah ada di repo, keluarannya
+selalu sama persis dari satu jalan ke jalan berikutnya, dan tidak ada
+unduhan atau pemanggilan jaringan apa pun saat berjalan.
+
+## Kompetisi
+
+Entri untuk kompetisi make.fun `news-image-20261122`: program menulis satu
+gambar ke `/output/entry.png`, lalu seorang juri AI yang bisa melihat
+gambar membandingkan entri dua demi dua dan memilih gambar yang paling
+baik merangkum berita dunia hari itu. Entri berperingkat tertinggi
+berbagi hadiah $100.
